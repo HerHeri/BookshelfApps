@@ -1,0 +1,605 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    float: center;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: darkcyan;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.button-danger {
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: indianred;
+    border: 0;
+    padding: 8px;
+}
+
+.button-danger:hover {
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: rgb(156, 60, 60);
+    border: 0;
+    padding: 8px;
+}
+
+.button-success{
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: darkcyan; 
+    border: 0;
+    padding: 8px;
+}
+
+.button-success:hover{
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: rgb(2, 103, 103); 
+    border: 0;
+    padding: 8px;
+}
+
+.footer-form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+
+.footer-form-edit {
+    display: flex;
+    /* justify-items: center; */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0 10px 0;
+}
+
+input {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0 5%;
+    height: 80px;
+    background-color: aquamarine;
+}
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: cadetblue;
+}
+
+nav .links  {
+    float: right;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkcyan;
+    text-decoration: none;
+}
+
+nav .links a:hover {
+    text-decoration: underline;
+    color: olivedrab;
+}
+
+nav .links li ul {
+    display: none;
+}
+
+nav .links li:hover ul {
+    display: block;
+    text-align: left;
+    background-color: aquamarine;
+    position: absolute;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -90px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: cadetblue;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.checkbox {
+    width: 50px;
+}
+
+.form-input-inline {
+    display: flex;
+    align-items: center;
+}
+
+.list-item {
+    width: 100%;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.item .inner h2 {
+    margin-bottom: unset;
+}
+
+.item .inner p {
+    margin-top: 5px;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+    background: url('./../icons/undo-ouline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('./../icons/undo-ouline.svg');
+    background-size: contain;
+}
+
+.check-button {
+    width: 40px;
+    height: 40px;
+    background: url('./../icons/check-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('./../icons/check-solid.svg');
+    background-size: contain;
+}
+
+.remove-button {
+    width: 40px;
+    height: 40px;
+    background: url('./../icons/trash-outline.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.remove-button:hover {
+    background: url('./../icons/trash-fill.svg');
+    background-size: contain;
+}
+
+.edit-button {
+    width: 40px;
+    height: 40px;
+    background: url('./../icons/pencil.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button:hover {
+    background: url('./../icons/pencil-fill.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .remove-button:focus .edit-button:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 80px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+        max-height: 150px;
+		flex-direction: column;
+		justify-content: center;
+		background-color: aquamarine;
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+    nav .links a {
+		font-size: 20px;
+	}
+
+	nav .links li:hover ul {
+		display: block;
+		left: 50%;
+		right: auto;
+		text-align: center;
+		transform: translateX(-50%);
+		background-color: aquamarine;
+		position: absolute;
+		width: 80%;
+		border-radius: 8px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+}
+main {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 50px 100px 50px;
+}
+
+.list-book {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 10px;
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list-header .title {
+    float: start;
+}
+
+.list-header .form-input-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 450px;
+}
+
+.list-header .form-input-line input {
+    float: right;
+    justify-content: center;
+    width: 300px;
+    height: 20px;
+}
+
+.insert-book {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
+    padding: 16px;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.insert-book h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.insert-book > form > .form-input {
+    margin: 8px 0;
+}
+
+.insert-book form .form-input input {
+    display: block;
+    width: 95%;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 0px;
+    margin: 5px 0 20px 0;
+}
+
+.insert-book form .form-input label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.insert-book form button .button-danger {
+    background-color: indianred;
+    color: black;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.insert-book form button .button-success {
+    background-color: darkcyan;
+    color: black;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* For Phone */
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+    main {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding: 100px 0 0 10px;
+    }
+
+    .list-book {
+        width: 87%;
+        -webkit-order: 1;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 20px 10px 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .insert-book {
+        -webkit-order: 2;
+        order: 2;
+        display: flex;
+        width: 87%;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 10px 10px 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    
+    .list-header {
+        display: block;
+        justify-content: center;
+    }
+
+    .list-header .title {
+        display: flex;
+        float: start;
+    }    
+
+    .list-header .form-input-line {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+    .list-header .form-input-line input {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .undo-button {
+        width: 20px;
+        height: 20px;
+        background: url('./../icons/undo-ouline.svg');
+        background-size: contain;
+        margin-left: auto;
+        cursor: pointer;
+        border: none;
+    }
+
+    .undo-button:hover {
+        background: url('./../icons/undo-ouline.svg');
+        background-size: contain;
+    }
+
+    .check-button:focus, .trash-button {
+        outline: none;
+    }
+
+    .check-button {
+        width: 20px;
+        height: 20px;
+        background: url('./../icons/check-outline.svg');
+        background-size: contain;
+        margin-left: auto;
+        cursor: pointer;
+        border: none;
+    }
+
+    .check-button:hover {
+        background: url('./../icons/check-solid.svg');
+        background-size: contain;
+    }
+
+    .remove-button {
+        width: 20px;
+        height: 20px;
+        background: url('./../icons/trash-outline.svg');
+        background-size: contain;
+        margin-left: 16px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .remove-button:hover {
+        background: url('./../icons/trash-fill.svg');
+        background-size: contain;
+    }
+
+    .edit-button {
+        width: 20px;
+        height: 20px;
+        background: url('./../icons/pencil.svg');
+        background-size: contain;
+        margin-left: 16px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .edit-button:hover {
+        background: url('./../icons/pencil-fill.svg');
+        background-size: contain;
+    }
+}
+
+/* For Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    main {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+        padding: 100px 0 0 10px;
+    }
+
+    .list-book {
+        width: 90%;
+        -webkit-order: 1;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 10px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .insert-book {
+        -webkit-order: 2;
+        order: 2;
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 10px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .list-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-header .title {
+        display: flex;
+        float: start;
+    }    
+
+    .list-header .form-input-line {
+        display: flex;
+        justify-content: space-around;
+        width: 330px;
+    }
+
+    .list-header .form-input-line input {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+    }
+}
+

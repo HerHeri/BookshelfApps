@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <input type="checkbox" id="nav-toggle">
+            <div class="logo"><strong>Bookshelf</strong> Apps</div>
+            <ul class="links">
+                <li><a href="javascript:void(0)" onclick="readBook()">Selesai dibaca</a></li>
+                <li><a href="javascript:void(0)" onclick="unreadBook()">Belum selesai dibaca</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <section class="insert-book" id="insert-book">
+            <h2>Masukkan Buku Baru</h2>
+            <form class="form" action="#" id="inputBook">
+                <div class="form-input">
+                    <label for="BookTitle">Judul Buku</label>
+                    <input type="text" id="inputBookTitle" required>
+                </div>
+                <div class="form-input">
+                    <label for="BookAuthor">Penulis Buku</label>
+                    <input type="text" id="inputBookAuthor" rewuired>
+                </div>
+                <div class="form-input">
+                    <label for="BookYear">Tahun Terbit Buku</label>
+                    <input type="number" id="inputBookYear" min="500">
+                </div>
+                <div class="form-input-inline">
+                    <label for="inputBookIsComplete">Buku sudah selesai dibaca?</label>
+                    <input class="checkbox" type="checkbox" id="inputBookIsComplete">
+                </div>
+                <div class="footer-form-input">
+                    <button id="submitInputBook" class="button-success" type="submit">Tambahkan Buku ke Rak</button>
+                </div>
+            </form>
+        </section>
+        <section class="insert-book" id="edit-book">
+            <h2>Edit Data Buku</h2>
+            <form class="form" action="#" id="editBook">
+                <input type="hidden" id="editIdBook">
+                <div class="form-input">
+                    <label for="BookTitle">Judul Buku</label>
+                    <input type="text" name="title" id="editBookTitle" required>
+                </div>
+                <div class="form-input">
+                    <label for="BookAuthor">Penulis Buku</label>
+                    <input type="text" name="author" id="editBookAuthor" rewuired>
+                </div>
+                <div class="form-input">
+                    <label for="BookYear">Tahun Terbit Buku</label>
+                    <input type="number" name="year" id="editBookYear" min="500">
+                </div>
+                <div class="form-input-inline">
+                    <label for="inputBookIsComplete">Buku sudah selesai dibaca?</label>
+                    <input class="checkbox" name="isComplete" type="checkbox" id="editBookIsComplete">
+                </div>
+                <div class="footer-form-edit">
+                    <button id="submitEditBook" type="submit" class="button-success">Simpan Data</button>
+                    <button onclick="Batal()" type="" class="button-danger">Batal</button>
+                </div>
+            </form>
+        </section>
+        <section class="list-book" id="list-read-book">
+            <div class="list-header">
+                <div class="title">
+                    <h2 class="container-header">Selesai dibaca</h2>
+                </div>
+                <div class="form-input-line">
+                    <input type="text" id="sudahDibaca" onkeyup="searchFunction(this.value)" placeholder="Cari berdasarkan judul">
+                    <button onclick="tambahBuku()" class="button-success" style="margin-top: 0;">Tambah Buku</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-item" id="alreadyRead"></div>
+            </div>
+        </section>
+        <section class="list-book" id="list-unread-book">
+            <div class="list-header">
+                <div class="title">
+                    <h2 class="container-header">Belum selesai dibaca</h2>
+                </div>
+                <div class="button">
+                    <div class="form-input-line">
+                        <input type="text" id="sudahDibaca" onkeyup="searchFunction(this.value)" placeholder="Cari berdasarkan judul">
+                        <button onclick="tambahBuku()" class="button-success" style="margin-top: 0;">Tambah Buku</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-item" id="unread"></div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
